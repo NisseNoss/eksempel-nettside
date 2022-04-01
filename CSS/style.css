@@ -2,4 +2,28 @@
   background-color: #F2EFDC;
 }
 
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.arrow {
+  border: solid  #F1F2E9;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 20px;
+  top: 90vh;
+  position: absolute;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  border-color: #261308;
+}
+
+#down {
+  height: 0px;
+}
 /*# sourceMappingURL=style.css.map */
