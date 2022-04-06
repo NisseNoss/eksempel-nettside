@@ -8,7 +8,7 @@ body {
     background-color: $background;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh, auto, 100px;
+    grid-template-rows: 100vh auto 100px;
     grid-template-areas: 
     "header"
     "main"
@@ -39,7 +39,7 @@ body {
 }
 
 #down{
-    height: 0px;
+    height: 0;
 }
 
 .main {
