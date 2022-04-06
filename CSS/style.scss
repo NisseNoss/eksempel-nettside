@@ -30,13 +30,32 @@ body {
     grid-area: header;
 }
 
-#icon {
-    font-size: 5rem;
-    color: $darkblue;
+.menu {
+    background-color: black;
+    position: sticky;
 }
 
-.logo {
-    background-color: #819FA6;
+#icon {
+    font-size: 5rem;
+    color: $lightblue;
+}
+
+.nav {
+    left: 50%;
+    top: 6vh;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    a {
+        padding: 40px;
+        color: $lightblue;
+        transition: 0.2s;
+
+        :hover {
+            background-color: $lightblue;
+            color: black;
+        }
+    }
 }
 
 .title{
@@ -49,24 +68,23 @@ body {
         text-transform: uppercase;
         display: block;
     }
-}
 
-
-.text1{
-    color: #F1F2E9;
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 8px;
-    margin-bottom: 20px;
-    position: relative;
-    animation: text 3s 1;
-}
-
-.text2{
-    text-transform: uppercase;
-    font-size: 30px;
-    color: #261308;
-    text-align: center;
+    .text1{
+        color: $lightblue;
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: 8px;
+        margin-bottom: 20px;
+        position: relative;
+        animation: text 3s 1;
+    }
+    
+    .text2{
+        text-transform: uppercase;
+        font-size: 30px;
+        color: $darkblue;
+        text-align: center;
+    }
 }
 
 @keyframes text{
@@ -84,16 +102,23 @@ body {
     }
 }
 
+.position {
+    left: 50%;
+    top: 90vh;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
 
 .arrow {
-    border: solid  $darkblue;
+    border: solid  $lightblue;
     border-width: 0 5px 5px 0;
     display: inline-block;
-    padding: 10px;
+    padding: 20px;
     //position: absolute;
     cursor: pointer;
     transition: 0.2s;
@@ -109,4 +134,5 @@ body {
 
 .footer {
     grid-area: footer;
+    text-align: center;
 }
