@@ -19,6 +19,11 @@ body {
     grid-area: header;
 }
 
+#icon {
+    font-size: 5rem;
+    color: $darkblue;
+}
+
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);

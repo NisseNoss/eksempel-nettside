@@ -1,13 +1,23 @@
 body {
   background-color: #F2EFDC;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100vh auto 100px;
-  grid-template-areas: "header" "main" "footer";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 100vh auto 100px;
+      grid-template-rows: 100vh auto 100px;
+      grid-template-areas: "header" "main" "footer";
 }
 
 .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: header;
+}
+
+#icon {
+  font-size: 5rem;
+  color: #2C3E40;
 }
 
 .down {
@@ -21,8 +31,10 @@ body {
   display: inline-block;
   padding: 10px;
   cursor: pointer;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
+
 .arrow :hover {
   border-color: #819FA6;
 }
@@ -32,11 +44,14 @@ body {
 }
 
 .main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: main;
 }
 
 .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: footer;
 }
-
 /*# sourceMappingURL=style.css.map */
