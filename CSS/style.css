@@ -10,6 +10,8 @@
 }
 
 body {
+  background-image: url(../Bilder/mountain.jpg);
+  background-attachment: fixed;
   background-color: #F2EFDC;
   display: -ms-grid;
   display: grid;
@@ -17,6 +19,7 @@ body {
       grid-template-columns: 1fr;
   -ms-grid-rows: 100vh auto 100px;
       grid-template-rows: 100vh auto 100px;
+  overflow-x: hidden;
       grid-template-areas: "header" "main" "footer";
 }
 
@@ -149,6 +152,61 @@ body {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: main;
+  background-color: #F2EFDC;
+}
+
+.media-scroller {
+  --spacer: 2rem;
+  display: -ms-grid;
+  display: grid;
+  gap: var(--spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 31%;
+  padding: 2rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-element {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  gap: var(--spacer);
+  padding: var(--spacer);
+  background: #819FA6;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(106, 106, 106, 0.363) 5px 5px;
+          box-shadow: rgba(106, 106, 106, 0.363) 5px 5px;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #2C3E40;
+}
+
+.media-element:hover {
+  background-color: #2C3E40;
+  color: #819FA6;
+  text-decoration: underline;
+}
+
+.media-element > img {
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.snaps-inline {
+  -ms-scroll-snap-type: inline mandatory;
+      scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 2rem;
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
 }
 
 .footer {
@@ -156,5 +214,6 @@ body {
   -ms-grid-column: 1;
   grid-area: footer;
   text-align: center;
+  background-color: #F2EFDC;
 }
 /*# sourceMappingURL=style.css.map */
