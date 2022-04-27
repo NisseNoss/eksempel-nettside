@@ -20,7 +20,9 @@ body {
   -ms-grid-rows: 100vh auto 100px;
       grid-template-rows: 100vh auto 100px;
   overflow-x: hidden;
-      grid-template-areas: "header" "main" "footer";
+      grid-template-areas: "header"
+ "main"
+ "footer";
 }
 
 .header {
