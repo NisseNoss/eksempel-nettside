@@ -1,39 +1,41 @@
+.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   list-style-type: none;
   padding: 0;
   margin: 0;
   text-decoration: none;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.1rem;
 }
 
 body {
   background-image: url(../Bilder/mountain.jpg);
   background-attachment: fixed;
-  background-color: #F2EFDC;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 100vh auto 100px;
-      grid-template-rows: 100vh auto 100px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh auto 100px;
   overflow-x: hidden;
-      grid-template-areas: "header"
- "main"
- "footer";
+  grid-template-areas: "header" "main" "footer";
 }
 
 .header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: header;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#litenHeader {
+  background-color: #F2EFDC;
 }
 
 .menu {
   background-color: black;
-  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -45,67 +47,58 @@ body {
 .nav {
   left: 50%;
   top: 6vh;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   position: absolute;
 }
-
 .nav a {
   padding: 40px;
   color: #819FA6;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-
 .nav a :hover {
   background-color: #819FA6;
   color: black;
+}
+
+.overskrift {
+  font-size: 3em;
+  color: #2C3E40;
+  font-weight: 700;
+}
+
+p {
+  color: #2C3E40;
+}
+
+.planpic {
+  margin-top: 3rem;
+  width: 70%;
 }
 
 .title {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .title span {
   text-transform: uppercase;
   display: block;
 }
-
 .title .text1 {
-  color: #819FA6;
+  color: #555938;
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 8px;
   margin-bottom: 20px;
   position: relative;
-  -webkit-animation: text 3s 1;
-          animation: text 3s 1;
+  animation: text 3s 1;
 }
-
 .title .text2 {
   text-transform: uppercase;
   font-size: 30px;
   color: #2C3E40;
   text-align: center;
-}
-
-@-webkit-keyframes text {
-  0% {
-    color: #261308;
-    margin-bottom: -40px;
-  }
-  30% {
-    letter-spacing: 25px;
-    margin-bottom: -40px;
-  }
-  85% {
-    letter-spacing: 8px;
-    margin-bottom: -40px;
-  }
 }
 
 @keyframes text {
@@ -122,12 +115,10 @@ body {
     margin-bottom: -40px;
   }
 }
-
 .position {
   left: 50%;
   top: 90vh;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   position: absolute;
 }
 
@@ -142,24 +133,19 @@ body {
   display: inline-block;
   padding: 20px;
   cursor: pointer;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-
 .arrow :hover {
   border-color: #819FA6;
 }
 
 .main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: main;
   background-color: #F2EFDC;
 }
 
 .media-scroller {
   --spacer: 2rem;
-  display: -ms-grid;
   display: grid;
   gap: var(--spacer);
   grid-auto-flow: column;
@@ -170,20 +156,15 @@ body {
 }
 
 .media-element {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: min-content;
-      grid-template-rows: -webkit-min-content;
-      grid-template-rows: min-content;
+  grid-template-rows: min-content;
   gap: var(--spacer);
   padding: var(--spacer);
   background: #819FA6;
   border-radius: 5px;
-  -webkit-box-shadow: rgba(106, 106, 106, 0.363) 5px 5px;
-          box-shadow: rgba(106, 106, 106, 0.363) 5px 5px;
+  box-shadow: rgba(106, 106, 106, 0.363) 5px 5px;
   cursor: pointer;
   text-decoration: none;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #2C3E40;
 }
@@ -196,14 +177,12 @@ body {
 
 .media-element > img {
   inline-size: 100%;
-  aspect-ratio: 16 / 9;
-  -o-object-fit: cover;
-     object-fit: cover;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 
 .snaps-inline {
-  -ms-scroll-snap-type: inline mandatory;
-      scroll-snap-type: inline mandatory;
+  scroll-snap-type: inline mandatory;
   scroll-padding-inline: 2rem;
 }
 
@@ -212,10 +191,9 @@ body {
 }
 
 .footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: footer;
   text-align: center;
   background-color: #F2EFDC;
 }
+
 /*# sourceMappingURL=style.css.map */

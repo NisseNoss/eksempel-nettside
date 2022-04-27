@@ -17,7 +17,7 @@ $contrast: #D9CAAD;
 body {
     background-image: url(../Bilder/mountain.jpg);
     background-attachment: fixed;
-    background-color: $background;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100vh auto 100px;
@@ -30,6 +30,8 @@ body {
 
 .header {
     grid-area: header;
+    background-color: rgba(255, 255, 255, 0.3);
+
 }
 
 #litenHeader {
@@ -76,7 +78,7 @@ body {
     }
 
     .text1{
-        color: $lightblue;
+        color: $darkgreen;
         font-size: 50px;
         font-weight: 700;
         letter-spacing: 8px;
