@@ -32,6 +32,10 @@ body {
     grid-area: header;
 }
 
+#litenHeader {
+    background-color: $background;
+}
+
 .menu {
     background-color: black;
     position: sticky;
