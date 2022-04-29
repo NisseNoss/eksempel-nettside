@@ -3,6 +3,9 @@ $darkblue: #2C3E40;
 $darkgreen: #555938;
 $background: #F2EFDC;
 $contrast: #D9CAAD;
+$overskrift: 3em;
+
+.center {text-align: center; display: flex; flex-direction: column; align-items: center}
 
 * {
     box-sizing: border-box;
@@ -64,6 +67,20 @@ body {
             color: black;
         }
     }
+}
+
+.overskrift {
+    font-size: $overskrift;
+    color: $darkblue;
+    font-weight: 700;
+}
+
+p {
+    color: $darkblue;
+}
+.planpic {
+    margin-top: 3rem;
+    width: 70%;
 }
 
 .title{
