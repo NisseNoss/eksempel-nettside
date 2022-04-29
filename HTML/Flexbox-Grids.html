@@ -32,7 +32,7 @@
 
     <div class="textbox center">
 
-        <span class="overskrift">Flexbox/Grids</span>
+        <h1>Flexbox/Grids</h1>
 
         <p>
             Flexbox og grids er to måter å forme og plasere ting på nettsiden din på en dynamisk måte.
@@ -40,6 +40,57 @@
 
     </div>
 
+    <div class="bilde-eks">
+        <img src="/Bilder/grid1.png">
+        <img src="/Bilder/grid2.png">
+        <img src="/Bilder/grid3.png">
+    </div>
+
+</div>
+
+<div class="main">
+    <div class="grids-eks">
+        <h1>Grid eksempel:</h1>
+        <br>
+        <p>display: grids;</p>
+        <p>gap: ...;</p>
+        <p>grid-template-columns: 1fr 1fr 1fr;</p>
+        <p>grid-template-rows: 5rem auto 5rem;</p>
+        <p>grid-template-areas:
+            "header header header"
+            "sideMenu main main"
+            "footer footer footer";</p>
+        <p>grid-area: (header);</p>
+        <br>
+        <p>I dette eksempelet er det 6 kolonner og 3 rader</p>
+
+        <div class="grid-container">
+            <div class="item1">Header</div>
+            <div class="item2">Menu</div>
+            <div class="item3">Main</div>
+            <div class="item4">Right</div>
+            <div class="item5">Footer</div>
+        </div>
+    </div>
+
+    <div class="flexbox-eks">
+        <h1>Flexbox eksempel:</h1>
+
+        <p>display: flex;</p>
+        <p>justify-content: space-between/center/space-evenly/space-around/...;</p>
+        <p>flex-direction: (reverse-)row/(reverse-)column/...;</p>
+
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+    </div>
 </div>
 
 <div class="footer">
