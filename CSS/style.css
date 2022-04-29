@@ -31,36 +31,41 @@ body {
 }
 
 #litenHeader {
-  background-color: #F2EFDC;
+  background-color: #f0f0f0;
 }
 
 .menu {
-  background-color: black;
-  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
-
-#icon {
+.menu #icon {
   font-size: 5rem;
-  color: #819FA6;
+  color: white;
 }
-
-.nav {
-  left: 50%;
-  top: 6vh;
-  transform: translate(-50%, -50%);
-  position: absolute;
+.menu .nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
 }
-.nav a {
-  padding: 40px;
-  color: #819FA6;
+.menu .nav .link {
+  padding: 1rem 2rem;
+  color: white;
   transition: 0.2s;
+  font-weight: bold;
 }
-.nav a :hover {
-  background-color: #819FA6;
-  color: black;
+.menu .nav .link:hover {
+  color: #819FA6;
+}
+.menu div {
+  width: 5rem;
 }
 
-.overskrift {
+h1 {
   font-size: 3em;
   color: #2C3E40;
   font-weight: 700;
@@ -68,6 +73,10 @@ body {
 
 p {
   color: #2C3E40;
+}
+
+.textbox {
+  margin-top: 6rem;
 }
 
 .planpic {
@@ -86,7 +95,7 @@ p {
   display: block;
 }
 .title .text1 {
-  color: #555938;
+  color: white;
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 8px;
@@ -135,7 +144,7 @@ p {
   cursor: pointer;
   transition: 0.2s;
 }
-.arrow :hover {
+.arrow:hover {
   border-color: #819FA6;
 }
 
@@ -188,6 +197,77 @@ p {
 
 .snaps-inline > * {
   scroll-snap-align: start;
+}
+
+.grids-eks {
+  padding: 1rem;
+}
+
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: menu;
+}
+
+.item3 {
+  grid-area: main;
+}
+
+.item4 {
+  grid-area: right;
+}
+
+.item5 {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header header header header header header" "menu main main main right right" "menu footer footer footer footer footer";
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 1rem;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 40px 0;
+  font-size: 30px;
+}
+
+.bilde-eks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+.bilde-eks img {
+  width: 30vw;
+}
+
+.flexbox-eks {
+  padding: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
 }
 
 .footer {

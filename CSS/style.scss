@@ -38,34 +38,45 @@ body {
 }
 
 #litenHeader {
-    background-color: $background;
+    background-color: #f0f0f0;
 }
 
 .menu {
-    background-color: black;
-    position: sticky;
-}
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 
-#icon {
-    font-size: 5rem;
-    color: $lightblue;
-}
+    //Logoen
+    #icon {
+        font-size: 5rem;
+        color: white;
+    }
 
-.nav {
-    left: 50%;
-    top: 6vh;
-    transform: translate(-50%, -50%);
-    position: absolute;
+    //Knappene i menyen
+    .nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
 
-    a {
-        padding: 40px;
-        color: $lightblue;
-        transition: 0.2s;
+        //Linkene
+        .link {
+            padding: 1rem 2rem;
+            color: white;
+            transition: .2s;
+            font-weight: bold;
 
-        :hover {
-            background-color: $lightblue;
-            color: black;
+            &:hover {
+                color: $lightblue;
+            }
         }
+    }
+
+    div {
+        width: 5rem;
     }
 }
 
@@ -95,7 +106,7 @@ p {
     }
 
     .text1{
-        color: $darkgreen;
+        color: white;
         font-size: 50px;
         font-weight: 700;
         letter-spacing: 8px;
@@ -148,7 +159,7 @@ p {
     cursor: pointer;
     transition: 0.2s;
 
-    :hover {
+    &:hover {
         border-color: $lightblue;
     }
 }
