@@ -6,96 +6,96 @@
     <meta charset="UTF-8">
     <title>4StarHotels</title>
 </head>
-<body>
+<body id="background-Grids">
 
-<div class="header" id="litenHeader">
+    <div class="header">
 
-    <div class="menu">
+        <div class="menu">
 
-        <div class="logo">
+            <div class="logo">
+                <p>
+                    <i class="material-icons" id="icon">hotel_class</i>
+                </p>
+            </div>
+
+            <div class="nav">
+                <a class="link" href="/index.html">Home</a>
+                <a class="link" href="#">About</a>
+                <a class="link" href="#">Hotels</a>
+                <a class="link" href="#">Spa</a>
+                <a class="link" href="#">Contact</a>
+            </div>
+
+            <div></div>
+
+        </div>
+
+        <div class="textbox center">
+
+            <h1>Flexbox/Grids</h1>
+
             <p>
-                <i class="material-icons" id="icon">hotel_class</i>
+                Flexbox og grids er to måter å forme og plasere ting på nettsiden din på en dynamisk måte.
             </p>
+
         </div>
 
-        <div class="nav">
-            <a class="link" href="/index.html">Home</a>
-            <a class="link" href="#">About</a>
-            <a class="link" href="#">Hotels</a>
-            <a class="link" href="#">Spa</a>
-            <a class="link" href="#">Contact</a>
+        <div class="bilde-eks">
+            <img src="/Bilder/grid1.png">
+            <img src="/Bilder/grid2.png">
+            <img src="/Bilder/grid3.png">
         </div>
 
-        <div></div>
-
     </div>
 
-    <div class="textbox center">
+    <div class="main">
+        <div class="grids-eks">
+            <h1>Grid eksempel:</h1>
+            <br>
+            <p>display: grids;</p>
+            <p>gap: ...;</p>
+            <p>grid-template-columns: 1fr 1fr 1fr;</p>
+            <p>grid-template-rows: 5rem auto 5rem;</p>
+            <p>grid-template-areas:
+                "header header header"
+                "sideMenu main main"
+                "footer footer footer";</p>
+            <p>grid-area: (header);</p>
+            <br>
+            <p>I dette eksempelet er det 6 kolonner og 3 rader</p>
 
-        <h1>Flexbox/Grids</h1>
+            <div class="grid-container">
+                <div class="item1">Header</div>
+                <div class="item2">Menu</div>
+                <div class="item3">Main</div>
+                <div class="item4">Right</div>
+                <div class="item5">Footer</div>
+            </div>
+        </div>
 
-        <p>
-            Flexbox og grids er to måter å forme og plasere ting på nettsiden din på en dynamisk måte.
-        </p>
+        <div class="flexbox-eks">
+            <h1>Flexbox eksempel:</h1>
 
-    </div>
+            <p>display: flex;</p>
+            <p>justify-content: space-between/center/space-evenly/space-around/...;</p>
+            <p>flex-direction: (reverse-)row/(reverse-)column/...;</p>
 
-    <div class="bilde-eks">
-        <img src="/Bilder/grid1.png">
-        <img src="/Bilder/grid2.png">
-        <img src="/Bilder/grid3.png">
-    </div>
-
-</div>
-
-<div class="main">
-    <div class="grids-eks">
-        <h1>Grid eksempel:</h1>
-        <br>
-        <p>display: grids;</p>
-        <p>gap: ...;</p>
-        <p>grid-template-columns: 1fr 1fr 1fr;</p>
-        <p>grid-template-rows: 5rem auto 5rem;</p>
-        <p>grid-template-areas:
-            "header header header"
-            "sideMenu main main"
-            "footer footer footer";</p>
-        <p>grid-area: (header);</p>
-        <br>
-        <p>I dette eksempelet er det 6 kolonner og 3 rader</p>
-
-        <div class="grid-container">
-            <div class="item1">Header</div>
-            <div class="item2">Menu</div>
-            <div class="item3">Main</div>
-            <div class="item4">Right</div>
-            <div class="item5">Footer</div>
+            <div class="flex-container">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
         </div>
     </div>
 
-    <div class="flexbox-eks">
-        <h1>Flexbox eksempel:</h1>
-
-        <p>display: flex;</p>
-        <p>justify-content: space-between/center/space-evenly/space-around/...;</p>
-        <p>flex-direction: (reverse-)row/(reverse-)column/...;</p>
-
-        <div class="flex-container">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-        </div>
+    <div class="footer">
+        Coffeeshop © 2022
     </div>
-</div>
-
-<div class="footer">
-    Coffeeshop © 2022
-</div>
 
 </body>
 </html>

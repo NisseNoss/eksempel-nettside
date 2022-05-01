@@ -2,10 +2,13 @@ $lightblue: #819FA6;
 $darkblue: #2C3E40;
 $darkgreen: #555938;
 $background: #F2EFDC;
+$background2: #f0f0f0;
 $contrast: #D9CAAD;
 $overskrift: 3em;
 
 .center {text-align: center; display: flex; flex-direction: column; align-items: center}
+#background-Index {background-image: url(../Bilder/mountain.jpg); background-attachment: fixed;}
+#background-Grids {background-image: url(../Bilder/grids.jpeg); background-attachment: fixed;}
 
 //* = alt i stylesheet får disse settingene. Dette blir altså standard men blir overkjørt dersom du skriver noe annet
 * {
@@ -20,8 +23,7 @@ $overskrift: 3em;
 
 //Body er den ytterste division
 body {
-    background-image: url(../Bilder/mountain.jpg);
-    background-attachment: fixed;
+    background-color: $background2;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -40,11 +42,6 @@ body {
 .header {
     grid-area: header;
     background-color: rgba(255, 255, 255, 0.3);
-
-}
-
-#litenHeader {
-    background-color: #f0f0f0;
 }
 
 //Hele menyen helt øverst på nettsiden
@@ -178,7 +175,7 @@ p {
 
 .main {
     grid-area: main;
-    background-color: $background;
+    background-color: $background2;
 }
 
 .media-scroller{
@@ -263,7 +260,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
     gap: 1rem;
 
     img {
@@ -302,4 +299,6 @@ p {
     grid-area: footer;
     text-align: center;
     background-color: $background;
+    border-top: black solid 2px;
+    padding: 2rem;
 }
