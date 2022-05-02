@@ -1,0 +1,55 @@
+$lightblue: #819FA6;
+$darkblue: #2C3E40;
+
+.media-scroller{
+  //Sier at variabelen "--spacer" har 2rem størrelse
+  --spacer: 2rem;
+  //Gjør egentlig ingenting, sier bare at det er en grid
+  display: grid;
+  //Setter et mellomrom mellom mellom elementene i scrolleren
+  gap: var(--spacer);
+  //Får alt til å gå til høyre på en rad selv om det bli overflow av det
+  grid-auto-flow: column;
+  //Hvor mange prosent av nettsiden som hvert av elementene skal ta
+  grid-auto-columns: 31%;
+
+  padding: 2rem;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-element{
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--spacer);
+  padding: var(--spacer);
+  background: $darkblue;
+  border-radius: 5px;
+  box-shadow: rgba(106, 106, 106, 0.363) 5px 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+  color: white;
+}
+
+.media-element:hover{
+  background-color: $lightblue;
+  color: $darkblue;
+  text-decoration: underline;
+}
+
+.media-element > img{
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.snaps-inline{
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 2rem;
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
