@@ -90,6 +90,14 @@ h1 {
   font-weight: 700;
 }
 
+.h1ColorPic {
+  color: #0583F2;
+}
+
+.h1media {
+  margin-top: 7rem !important;
+}
+
 p {
   color: #2C3E40;
 }
@@ -129,8 +137,25 @@ p {
   text-align: center;
 }
 
-.h1ColorPic {
-  color: #0583F2;
+@keyframes text {
+  0% {
+    color: #261308;
+    margin-bottom: -40px;
+  }
+  30% {
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+  }
+  85% {
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  }
+}
+.position {
+  left: 50%;
+  top: 90vh;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 
 .colorPic {
@@ -174,27 +199,6 @@ p {
   color: #033E8C;
 }
 
-@keyframes text {
-  0% {
-    color: #261308;
-    margin-bottom: -40px;
-  }
-  30% {
-    letter-spacing: 25px;
-    margin-bottom: -40px;
-  }
-  85% {
-    letter-spacing: 8px;
-    margin-bottom: -40px;
-  }
-}
-.position {
-  left: 50%;
-  top: 90vh;
-  transform: translate(-50%, -50%);
-  position: absolute;
-}
-
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -227,8 +231,7 @@ p {
   overflow-x: auto;
   overscroll-behavior-inline: contain;
 }
-
-.media-element {
+.media-scroller .media-element {
   display: grid;
   grid-template-rows: min-content;
   gap: var(--spacer);
@@ -241,14 +244,12 @@ p {
   transition: 0.3s;
   color: white;
 }
-
-.media-element:hover {
+.media-scroller .media-element:hover {
   background-color: #819FA6;
   color: #2C3E40;
   text-decoration: underline;
 }
-
-.media-element > img {
+.media-scroller .media-element img {
   inline-size: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
@@ -258,9 +259,12 @@ p {
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 2rem;
 }
-
-.snaps-inline > * {
+.snaps-inline * {
   scroll-snap-align: start;
+}
+
+.media-header {
+  margin-top: 8rem;
 }
 
 .grids-eks {
@@ -340,11 +344,6 @@ p {
   background-color: #F2EFDC;
   border-top: black solid 2px;
   padding: 2rem;
-}
-
-.ting {
-  background-color: #0597F2;
-  color: #033E8C;
 }
 
 /*# sourceMappingURL=style.css.map */

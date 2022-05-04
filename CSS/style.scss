@@ -235,42 +235,74 @@ p {
 
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-}
 
-.media-element{
-    display: grid;
-    grid-template-rows: min-content;
-    gap: var(--spacer);
-    padding: var(--spacer);
-    background: $darkblue;
-    border-radius: 5px;
-    box-shadow: rgba(106, 106, 106, 0.363) 5px 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.3s;
-    color: white;
-}
+    .media-element{
+        display: grid;
+        grid-template-rows: min-content;
+        gap: var(--spacer);
+        padding: var(--spacer);
+        background: $darkblue;
+        border-radius: 5px;
+        box-shadow: rgba(106, 106, 106, 0.363) 5px 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.3s;
+        color: white;
 
-.media-element:hover{
-    background-color: $lightblue;
-    color: $darkblue;
-    text-decoration: underline;
-}
+        &:hover{
+            background-color: $lightblue;
+            color: $darkblue;
+            text-decoration: underline;
+        }
 
-.media-element > img{
-    inline-size: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+        img{
+            inline-size: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+    }
 }
 
 .snaps-inline{
     scroll-snap-type: inline mandatory;
     scroll-padding-inline: 2rem;
+
+    * {
+        scroll-snap-align: start;
+    }
 }
 
-.snaps-inline > * {
-    scroll-snap-align: start;
+.media-header {
+    margin-top: 8rem;
 }
+//--MEDIA-SCROLLER END--
+
+
+
+
+
+
+
+
+    //--Media-Scroller (eksempel)--
+
+    .eksempel-omradet {
+
+    }
+
+
+
+
+
+
+    //--Media-Scroller (eksempel) END--
+
+
+
+
+
+
 
 //--Eksempel på Grids:--
 
