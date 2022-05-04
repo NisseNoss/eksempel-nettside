@@ -1,3 +1,4 @@
+//--Farger--
 $lightblue: #819FA6;
 $darkblue: #2C3E40;
 $darkgreen: #555938;
@@ -6,12 +7,14 @@ $background2: #f0f0f0;
 $contrast: #D9CAAD;
 $overskrift: 3em;
 
+//--Farger - Eksempelnettside--
 $exdarkblue: #033E8C;
 $exblue: #0583F2;
 $exlightblue: #0597F2;
 $exgreenblue: #03738C;
 $exgreen: #76832B;
 
+//--Utility Classes--
 .white {color: white}
 .center {text-align: center; display: flex; flex-direction: column; align-items: center}
 .fade {background-color: rgba(255, 255, 255, 0.3);}
@@ -19,7 +22,7 @@ $exgreen: #76832B;
 #background-Grids {background-image: url(../Bilder/grids.jpeg); background-attachment: fixed;}
 #background-Color {background-image: url("/Bilder/fintBilde.png"); background-attachment: fixed; background-repeat: no-repeat; background-size: cover}
 
-
+//--Generelle settings for alt i CSS--
 //* = alt i stylesheet får disse settingene. Dette blir altså standard men blir overkjørt dersom du skriver noe annet
 * {
     box-sizing: border-box;
@@ -31,6 +34,7 @@ $exgreen: #76832B;
     font-size: 1.1rem;
 }
 
+//--Body--
 //Body er den ytterste division
 body {
     background-color: $background2;
@@ -45,6 +49,7 @@ body {
     "footer";
 }
 
+//--HEADER--
 //Header er den øverste delen a nettsiden:
 //(header)
 //main
@@ -53,6 +58,7 @@ body {
     grid-area: header;
 }
 
+//--MENU--
 //Hele menyen helt øverst på nettsiden
 .menu {
     display: flex;
@@ -92,16 +98,27 @@ body {
         width: 5rem;
     }
 }
+//--MENU END--
 
+//--FONTS--
 h1 {
     font-size: $overskrift;
     color: $darkblue;
     font-weight: 700;
 }
 
+.h1ColorPic {
+    color: $exblue;
+}
+
+.h1media {
+    margin-top: 7rem !important;
+}
+
 p {
     color: $darkblue;
 }
+//--FONTS END--
 
 .textbox {
     margin-top: 6rem;
@@ -112,6 +129,7 @@ p {
     width: 70%;
 }
 
+//--Overskriften på nettsiden + animasjon--
 .title{
     position: absolute;
     top: 50%;
@@ -141,15 +159,36 @@ p {
     }
 }
 
-.h1ColorPic {
-    color: $exblue;
+@keyframes text{
+    0%{
+        color: #261308;
+        margin-bottom: -40px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
 }
 
+.position {
+    left: 50%;
+    top: 90vh;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+//--END--
+
+//Bildet paa fargevalg og bilder (er i header)
 .colorPic {
     width: 70%;
     margin-top: 2rem;
 }
 
+//ting i main paa fargevalg og bilder
 #fargeOgBilde {
 
     .flexColor {
@@ -178,28 +217,7 @@ p {
 
 }
 
-@keyframes text{
-    0%{
-        color: #261308;
-        margin-bottom: -40px;
-    }
-    30%{
-        letter-spacing: 25px;
-        margin-bottom: -40px;
-    }
-    85%{
-        letter-spacing: 8px;
-        margin-bottom: -40px;
-    }
-}
-
-.position {
-    left: 50%;
-    top: 90vh;
-    transform: translate(-50%, -50%);
-    position: absolute;
-}
-
+//Pil ned paa nettsiden
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -210,7 +228,6 @@ p {
     border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 20px;
-    //position: absolute;
     cursor: pointer;
     transition: 0.2s;
 
@@ -218,12 +235,19 @@ p {
         border-color: $lightblue;
     }
 }
+//Slutt
 
+//--MAIN--
+//Main er hoveddelen pa nettsiden:
+//header
+//(main)
+//footer
 .main {
     grid-area: main;
     background-color: $background2;
 }
 
+//--MEDIA-SCROLLER--
 .media-scroller{
     --spacer: 2rem;
     display: grid;
@@ -305,7 +329,6 @@ p {
 
 
 //--Eksempel på Grids:--
-
 .grids-eks {
     padding: 1rem;
 }
@@ -345,11 +368,9 @@ p {
         width: 30vw;
     }
 }
-
 //--Slutt--
 
 //--Eksempel på Flexbox--
-
 .flexbox-eks {
     padding: 1rem;
 }
@@ -370,9 +391,13 @@ p {
     line-height: 75px;
     font-size: 30px;
 }
-
 //--Slutt--
 
+//--FOOTER--
+//Footer er den nederste delen pa nettsiden:
+//header
+//main
+//(footer)
 .footer {
     grid-area: footer;
     text-align: center;
@@ -380,8 +405,4 @@ p {
     border-top: black solid 2px;
     padding: 2rem;
 }
-
-.ting {
-    background-color: $exlightblue;
-    color: $exdarkblue;
-}
+//--FOOTER END--
