@@ -237,6 +237,20 @@ p {
 }
 //Slutt
 
+//--Animasjons eksempel--
+.animasjonsEKS {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: eksempel;
+    animation-duration: 4s;
+}
+
+@keyframes eksempel {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
 //--MAIN--
 //Main er hoveddelen pa nettsiden:
 //header
