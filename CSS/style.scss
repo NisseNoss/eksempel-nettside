@@ -118,6 +118,19 @@ h1 {
 p {
     color: $darkblue;
 }
+
+.grids-eksempel {
+    font-size: 2rem;
+    color: $darkblue;
+    border-bottom: 2px solid $darkblue;
+    transition: .2s;
+
+    &:hover {
+        color: $lightblue;
+        border-bottom: 2px solid $lightblue;
+    }
+}
+
 //--FONTS END--
 
 .textbox {
